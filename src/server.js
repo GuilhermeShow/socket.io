@@ -6,6 +6,8 @@ import { Server } from "socket.io";
 
 const app = express()
 
+const port = process.env.PORT || 8000
+
 const caminhoAtual = url.fileURLToPath(import.meta.url);
 const diretorio = path.join(caminhoAtual, "../..", "public")
 
@@ -13,7 +15,7 @@ app.use(express.static(diretorio));
 
 const servidor = http.createServer(app);
 
-servidor.listen(8000, () => {
+servidor.listen(port, () => {
     console.log(`Servidor ligado na porta: 8000`)
 })
 
