@@ -3,6 +3,7 @@ import path from "path";
 import url from "url";
 import http from "http";
 import { Server } from "socket.io";
+import "dotenv/config";
 
 const app = express()
 
